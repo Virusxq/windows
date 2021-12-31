@@ -1,0 +1,168 @@
+
+/* Собственно сам слайдер */
+.slider{
+    width: 832px;
+    float: left;
+    position: relative;
+    margin-top: 45px;
+    height: 620px;
+}
+
+.slidebar {
+    position: relative;
+    margin-bottom: 72px;
+    height: 620px;
+    background-color: #fff;
+}
+
+
+.item img {
+    width: 332px;
+    height: 509px;
+    position: absolute;
+    top: 39px;
+    left: 351px;
+    -webkit-filter: drop-shadow(10px 10px 10px #1c1c1c);
+    filter: drop-shadow(10px 10px 10px #1c1c1c);  
+
+}
+
+
+.slider-title h1 {
+    width: 328px;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 51.5px;
+    color: #7E7753;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.color-bar {
+    margin-left: 560px;
+    margin-top: 45px;
+    width: 270px;
+    height: 658px;
+    background-color: #91630A;
+}
+
+.second {
+    display: block;
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 120px;
+    color: #7D4670;
+    
+}
+
+.slider-text {
+    width: 300px;
+}
+
+.slider-text h3 {
+    color: #000;
+    font-weight: 900;
+    font-size: 80px;
+    margin-bottom: 4px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    width: 300px;
+}
+
+.slider-text p {
+    font-weight: 500;
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.slider-callbtn button {
+    width: 339px;
+    height: 70px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #7D4670;
+    box-shadow: 0px 11px 26px rgba(125, 70, 112, 0.68);
+    border-radius: 90px;
+    border: none;
+    margin-top: 49px;
+}
+
+.slider-callbtn:hover button {
+    color: #7D4670;
+    background-color: #fff;
+    font-size: 26px;
+}
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    padding-top: 6px;
+    text-align: center;
+    margin-top: -22px;
+    color: black;
+    font-size: 18px;
+    transition: 0.1s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    left: 49px;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    border-radius: 50%;
+    border: solid 1px #000;
+    transition: 0s;
+}
+/* Кружочки */
+.slider-dots {
+    position: absolute;
+    bottom: 0px;
+    left: 158px;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 17px;
+    width: 17px;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #7D4670;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
